@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8인 본1부3\서폿본캐시 체크</title>
+    <title>8인 본1부3</title>
     <style>
         .container {
             max-width: 800px;
@@ -272,10 +272,16 @@ function cartesianProduct(arrays) {
 
         // Reset all inputs and checkboxes
         resetButton.addEventListener('click', () => {
-            inputElements.forEach(input => input.value = '1');
-            updateRemainingSum();
-            resultSection.innerHTML = '<p></p>';
-        });
+    // 모든 숫자 입력값을 1로 변경
+    inputElements.forEach(input => input.value = '1');
+    
+    // 모든 체크박스를 해제
+    checkboxElements.forEach(checkbox => checkbox.checked = false);
+    
+    // 남은 합 업데이트 및 결과 초기화
+    updateRemainingSum();
+    resultSection.innerHTML = '<p></p>';
+});
 
         // Initial call to set the remaining sum
         updateRemainingSum();
