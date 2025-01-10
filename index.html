@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8인 본1부3</title>
     <style>
+        #top-left-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000; /* 다른 요소 위에 표시되도록 설정 */
+        }
+        #top-left-button button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #top-left-button button:hover {
+            background-color: #0056b3;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -40,6 +58,9 @@
     </style>
 </head>
 <body>
+    <div id="top-left-button">
+    <button onclick="location.href='another-page.html'">다른 페이지로 이동</button>
+    </div>
     <div class="container">
         <h1>8인 본1부3 폿본 체크</h1>
         <div class="row-group">
